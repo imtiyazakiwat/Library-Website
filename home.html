@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Fantastic Homepage</title>
+    <!-- Include Tailwind CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100">
+
+<!-- Navigation -->
+<nav class="bg-blue-500 p-4">
+    <div class="container mx-auto">
+        <a href="#" class="text-white text-2xl font-bold">My Awesome Website</a>
+    </div>
+</nav>
+
+<!-- Hero Section -->
+<div class="bg-gradient-to-b from-blue-500 via-blue-400 to-blue-300 py-16">
+    <div class="container mx-auto text-center">
+        <h1 class="text-4xl text-white font-bold mb-4">Welcome to My Fantastic Website</h1>
+        <p class="text-lg text-white">Where dreams come to life!</p>
+        <button id="getStartedBtn" class="bg-yellow-400 hover:bg-yellow-300 text-gray-800 font-bold py-2 px-4 mt-6 rounded-full">Get Started</button>
+    </div>
+</div>
+
+<!-- Featured Content -->
+<section class="py-12">
+    <div class="container mx-auto text-center">
+        <h2 class="text-3xl font-bold mb-6">Featured Content</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+            <!-- Featured Content Cards -->
+            <!-- Card 1 -->
+            <div class="bg-white p-6 rounded-lg shadow-lg">
+                <h3 class="text-xl font-semibold mb-2">Feature 1</h3>
+                <p class="text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+            <!-- Card 2 -->
+            <div class="bg-white p-6 rounded-lg shadow-lg">
+                <h3 class="text-xl font-semibold mb-2">Feature 2</h3>
+                <p class="text-gray-600">Pellentesque auctor lacus vel justo dapibus, sit amet tincidunt ligula.</p>
+            </div>
+            <!-- Card 3 -->
+            <div class="bg-white p-6 rounded-lg shadow-lg">
+                <h3 class="text-xl font-semibold mb-2">Feature 3</h3>
+                <p class="text-gray-600">In vel urna quis justo consectetur consectetur nec at ligula.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- About Section -->
+<section class="bg-gray-200 py-12">
+    <div class="container mx-auto text-center">
+        <h2 class="text-3xl font-bold mb-6">About Us</h2>
+        <p class="text-gray-600">We are a team of passionate individuals dedicated to making the world a better place.</p>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-gray-800 text-white py-6">
+    <div class="container mx-auto text-center">
+        <p>&copy; 2023 My Awesome Website</p>
+    </div>
+</footer>
+
+<!-- JavaScript for the Get Started button redirection -->
+<script>
+    // Get a reference to the "Get Started" button
+    const getStartedButton = document.getElementById("getStartedBtn");
+
+    // Add a click event listener to the button
+    getStartedButton.addEventListener("click", function() {
+        // Redirect the user to the login page (replace "login.html" with the actual login page URL)
+        window.location.href = "login.html";
+    });
+</script>
+
+</body>
+</html>

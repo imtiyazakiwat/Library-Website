@@ -2,35 +2,38 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- ... (head section) ... -->
-    <!-- <link rel="stylesheet" href="styles.css"> -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Page</title>
+    <!-- Include Firebase Firestore script -->
     <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
-    <title>Admin Panel</title>
-</head>
-<body>
-    <div class="admin-container">
-        <h1>Admin Panel</h1>
-        <p>Welcome, Admin!</p>
-        
-        <h2>Registered Users</h2>
-        <table>
+    <link rel="stylesheet" href="admin.css">
+
+    </head>
+    <body>
+        <h1>Welcome Admin!</h1>
+        <h2>List of Registered Users</h2>
+        <table id="user-table">
             <thead>
                 <tr>
+                    <th>Name</th>
                     <th>Username</th>
                     <th>Email</th>
-                    <th>Registration Date</th>
+                    <th>Mobile Number</th>
+                    <th>Village</th>
+                    <th>Age</th>
                 </tr>
             </thead>
             <tbody id="user-list">
-                <!-- User data will be inserted here dynamically -->
+                <!-- User data will be displayed here -->
             </tbody>
         </table>
-    </div>
-
-    <script src="firebase-config.js"></script>
-    <script src="admin.js"></script>
-</body>
+    
+        <!-- Include Firebase configuration script -->
+        <script src="firebase-config.js"></script>
+        <script src="admin.js"></script>
+    </body>
 </html>
