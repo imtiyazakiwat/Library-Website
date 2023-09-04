@@ -1,24 +1,23 @@
 // admin.js
 // Check if the current user has access to the admin page
-firebase.auth().onAuthStateChanged(function(user) {
+firebase.auth().onAuthStateChanged(function (user) {
   if (user) {
     // User is signed in.
-    if (user.email === 'libraryadmin@gmail.com') {
+    if (user.email === "libraryadmin@gmail.com") {
       // This user has access to the admin page, proceed to display the content.
       displayUsers();
     } else {
       // Redirect or show an error message for unauthorized access.
       alert("Unauthorized access to admin page.");
-      window.location.href = "login.html";
+      window.location.href = "/";
       // You can also redirect the user to another page using window.location.href.
     }
   } else {
     // No user is signed in, handle this as needed.
     // For example, you can redirect the user to the login page.
-    window.location.href = "login.html";
+    window.location.href = "login";
   }
 });
-
 
 const userTable = document.getElementById("user-table");
 const userList = document.getElementById("user-list");

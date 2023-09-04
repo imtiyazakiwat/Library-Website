@@ -1,8 +1,12 @@
 // registration.js
 const registrationForm = document.getElementById("registration-form");
+const loadingSpinner = document.getElementById("loadingSpinner");
 
 registrationForm.addEventListener("submit", async (event) => {
   event.preventDefault();
+  
+  // Show the loading spinner
+  loadingSpinner.classList.remove("hidden");
 
   const name = registrationForm.name.value;
   const username = registrationForm.username.value;
@@ -13,7 +17,9 @@ registrationForm.addEventListener("submit", async (event) => {
   const password = registrationForm.password.value;
 
   try {
-    const userCredential = await firebase.auth().createUserWithEmailAndPassword(email, password);
+    const userCredential = await firebase
+      .auth()
+      .createUserWithEmailAndPassword(email, password);
     const user = userCredential.user;
 
     // Save additional user information to Firestore
@@ -26,8 +32,15 @@ registrationForm.addEventListener("submit", async (event) => {
       age,
     });
 
+    // Hide the loading spinner
+    loadingSpinner.classList.add("hidden");
+
     alert(`Registration successful! Welcome, ${username}!`);
+    window.location.href = "/"; // Redirect to your index page
   } catch (error) {
+    // Hide the loading spinner
+    loadingSpinner.classList.add("hidden");
+
     alert(`Registration failed. Error: ${error.message}`);
   }
 });
